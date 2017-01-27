@@ -1,7 +1,7 @@
 # esbrowse
 Use esprima parse and escodegen generate to get better line numbers in JS runtime errors by deminifying
 
-## Purpose:
+## Purpose
 
 javascript runtime errors with real line numbers even in minified code
 
@@ -23,7 +23,7 @@ interfering with startwindow.js.  It can be plugged in as needed,
 recompile with it added, use it for an hour and then remove it before committing
 anything to the real edbrowse.
 
-Contents:
+## Contents
 
 (1) es.js - contains esprima parse and escodegen libraries
 
@@ -43,7 +43,7 @@ to go to jdb anymore.
 
 (5) README
 
-Suggested usage:
+## Suggested usage
 
 - Use the diff as a guide to modifying the makefile
 - Compile edbrowse with es.js brought in
@@ -60,7 +60,7 @@ newCode = escodegen.generate(esprima.parse(document.scripts[n].data))
 - Cobble together a new infinite.html with the code with linefeeds
 - Carry on with your research
 
-References:
+## References
 
 https://github.com/jquery/esprima
 
