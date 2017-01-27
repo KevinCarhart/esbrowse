@@ -26,9 +26,12 @@ anything to the real edbrowse.
 Contents:
 
 (1) es.js - contains esprima parse and escodegen libraries
+
 (2) GNUmakefile.diff - a proof of concept where es.js in brought into the makefile
 the same way as we do it with startwindow.js
+
 (3) ebjs.c - modified to bring in the es.js code in the same way as startwindow
+
 (4) infinite.html - example of a web page which contains something that we want to
 track down, and also has minified code that hinders our work.
 To avoid a catch-22 in trying to use edbrowse to work on code
@@ -37,6 +40,7 @@ top of the code.  So it raises a runtime error immediately, the js
 environment is still available, and you can go to jdb, whereas if edbrowse
 went into an infinite loop and you escaped with ^C, you wouldn't be able to
 to go to jdb anymore.
+
 (5) README
 
 Suggested usage:
@@ -59,5 +63,6 @@ newCode = escodegen.generate(esprima.parse(document.scripts[n].data))
 References:
 
 https://github.com/jquery/esprima
+
 https://github.com/estools/escodegen/wiki/API
 
