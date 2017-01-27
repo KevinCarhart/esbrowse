@@ -1,0 +1,18 @@
+62a63,65
+> es.c: es.js
+> 	cd .. ; ./tools/buildsourcestring.pl src/es.js esJS src/es.c
+> 
+71c74
+< edbrowse: $(EBOBJS) startwindow.o
+---
+> edbrowse: $(EBOBJS) startwindow.o es.o
+84,85c87,88
+< edbrowse-infx: $(EBOBJS) startwindow.o dbops.o dbinfx.o
+< 	esql $(ESQLDFLAGS) -o edbrowse-infx $(EBOBJS) startwindow.o dbops.o dbinfx.o $(LDLIBS)
+---
+> edbrowse-infx: $(EBOBJS) startwindow.o es.o dbops.o dbinfx.o
+> 	esql $(ESQLDFLAGS) -o edbrowse-infx $(EBOBJS) startwindow.o es.o dbops.o dbinfx.o $(LDLIBS)
+89c92
+< 	startwindow.c ebrc.c msg-strings.c
+---
+> 	startwindow.c es.c ebrc.c msg-strings.c
